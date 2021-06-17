@@ -33,7 +33,6 @@ public class Chariot {
     }
 
     boolean placeDispo(int poidMarchandise) {
-        if ((poidMarchandise + poidsUsed) <= poidsMax) return true;
-        else return false;
+        return (poidMarchandise + poidsUsed) <= poidsMax;
     }
 }
