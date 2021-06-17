@@ -22,25 +22,18 @@ public class MdseStock {
         return tailleStock;
     }
 
-    MdseObjet extraireElement() {
+    MdseObjet extraireElement(int i) {
         MdseObjet element;
-        element = marchandisesS.get(tailleStock - 1); // get the last element
+        element = marchandisesS.get(i); // get the i eme element
         marchandisesS.remove(element); //delete it from the list
         tailleStock--;
         return element;  //return it
     }
 
-    MdseObjet depilerStock(int i) {
-        MdseObjet element;
-        element = marchandisesS.get(i); // get the last element
-        marchandisesS.remove(element); //delete it from the list
-        tailleStock--;
-        return element;  //return it
-    }
 
     void printStock() {
         for (int i = 0; i < tailleStock; i++) {
-            System.out.println("Marchandise: "+ marchandisesS.get(i) + " de poids " + marchandisesS.get(i).getPoids());
+            System.out.println("Marchandise: " + marchandisesS.get(i) + " de poids " + marchandisesS.get(i).getPoids());
         }
     }
 }

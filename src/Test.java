@@ -4,10 +4,10 @@ public class Test {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        final int capaciteChariot = 40;
-        final int capaciteStock = 10;
+        final int capaciteChariot = 60;
+        final int capaciteStock = 20;
 
-        System.out.println("Lancement du programme");
+        System.out.println("Lancement du programme\n");
 
         MdseStock stock = new MdseStock(capaciteStock);
         Chariot chariot = new Chariot(capaciteChariot, stock);
@@ -21,6 +21,6 @@ public class Test {
         t1.join();
         t2.join();
 
-        System.out.println("Fin du programme");
+        System.out.println("\nFin du programme");
     }
 }
